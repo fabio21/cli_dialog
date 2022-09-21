@@ -1,18 +1,22 @@
 name: example
 description: A dialog asking the same questions as ng new when creating a new workspace/project
 version: 1.0.0
-author: Leonardo Braguinski <leo.braguinski@gmail.com>
+publish_to: none
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   cli_dialog:
-  dart_console: ^1.0.0
+    path: ../../cli_dialog
+  dart_console:
+    git:
+      url: git@github.com:fabio21/dart_console.git
+    #path: ../../dart_console
 
 dev_dependencies:
   test: ^1.16.5
 
-dependency_overrides:
-  cli_dialog:
-    path: ../
+#dependency_overrides:
+#  cli_dialog:
+#    path: ../
